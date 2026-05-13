@@ -1,118 +1,125 @@
-# Portfolio Team
+# Portfolio Team (Collaborative Crypto Portfolio)
 
 ## Overview
 ### Problem
-- **Who is affected?** Crypto investment teams, study groups, or small trading desks.
-- **What is the issue?** Teams lack a unified platform to track shared crypto portfolios, compare individual member performance, and manage allocations collaboratively. Existing tools are often geared toward solo investors or are overly complex and expensive for small groups.
+- **Who is affected?**: Small crypto investment teams, study groups, or trading clubs who want a shared way to track their collective and individual performance.
+- **What is the issue?**: Most crypto trackers are for solo use. Teams have to use messy spreadsheets to see how everyone is doing together, leading to data entry errors and a lack of real-time visibility into the team's total health.
 
 ### Outcome
-- **What was achieved?** Developed a collaborative team crypto portfolio tracker where multiple users can log in, add trades (up to a 5-coin limit per member), and view real-time team and individual performance through interactive charts. 
-- **Measurable results (if any).** Successfully integrated multi-user authentication, combined team-wide portfolio calculations, and interactive visualisations into a single cohesive dashboard.
+- **What was achieved?**:
+
+| Objective | Solution | Result |
+| :--- | :--- | :--- |
+| Shared team performance tracking | Multi-user login and dashboard with aggregate stats | Success |
+| Real-time price updates for all members | Custom CoinGecko Pro SDK integration | Success |
+| Efficient analytical data storage | DuckDB for collaborative SQL operations | Success |
+| High-performance charting | TradingView & Chart.js for team visuals | Success |
+
+- **Measurable results (if any)**: A fully functional collaborative platform where multiple users can contribute to a single team portfolio, with per-member coin limits and real-time aggregate performance analytics.
 
 ---
 
 ## Demo
-- **How does the solution work from the user’s perspective?**
-  1. Users log in or register an account.
-  2. Each member can search for coins and add their buy/sell trades, limited to 5 unique coins per member to encourage focused investing.
-  3. The main dashboard displays aggregate team statistics (Total Value, Team PnL) alongside the individual user's statistics.
-  4. Interactive charts allow users to toggle between historical performance and asset allocation, with breakdowns of team vs. individual member contributions.
-  5. The team holdings and trade history tables provide a transparent view of all team actions.
+Our solution makes tracking crypto as a team simple and visual:
+1.  **Join the Team:** Register your account and log in to your personal dashboard.
+2.  **Add Your Picks:** Search for a coin (like Bitcoin), enter your trade details, and save. You have 5 slots to showcase your best ideas!
+3.  **See the Big Picture:** The main screen automatically shows the team's total value and overall profit/loss.
+4.  **Compare & Contrast:** Use the interactive charts to see who's leading the pack or how the team's balance has changed over time.
 
-**Screenshots:**
-![Login Screen](assets/screenshot_login.png)
-![Dashboard Overview](assets/screenshot_team_0.png)
-![Team Performance Charts](assets/screenshot_team_1.png)
-![Team Portfolio Table](assets/screenshot_team_2.png)
+| Welcome Screen | Team Dashboard |
+| :--- | :--- |
+| ![Login Screen](assets/screenshot_login.png) | ![Dashboard Overview](assets/screenshot_team_0.png) |
+
+| Performance Trends | Detailed Tables |
+| :--- | :--- |
+| ![Team Performance](assets/screenshot_team_1.png) | ![Team Portfolio](assets/screenshot_team_2.png) |
 
 ---
 
 ## Technology Stack
 ### Frontend components:
-- **Vanilla HTML5 / CSS3** for structure and styling.
-- **Vanilla JavaScript (ES6 Modules)** for API interaction and DOM manipulation.
-- **TradingView Lightweight Charts** for high-performance financial time-series charts.
-- **Chart.js** for categorical data visualisations (e.g., allocation doughnut charts, member performance bar charts).
+- **HTML/CSS/JS**: The core building blocks used to create a clean, responsive team dashboard with dark-mode aesthetics.
+- **TradingView Lightweight Charts**: Used to visualize team-wide performance history with professional-grade interactive graphs.
+- **Chart.js**: Powering the categorical visualizations, such as asset allocation doughnut charts and member performance bar charts.
 
 ### Backend components:
-- **Python 3 & FastAPI** for a high-performance asynchronous REST API.
-- **DuckDB** for fast, embedded, analytical SQL database operations.
-- **bcrypt + python-jose** for secure JWT-based authentication.
-- **CoinGecko Pro API** (via custom SDK integration) for real-time and historical market data.
+- **Python & FastAPI**: The high-performance "brain" that manages multi-user authentication, collaborative trade processing, and real-time market data.
+- **DuckDB**: A super-fast analytical database used to securely store and aggregate trade data from all team members simultaneously.
+- **CoinGecko Pro API**: Our trusted source for fetching accurate, professional-level cryptocurrency market data for the entire team.
 
 ---
 
 ## Development Approach with AI
-- **List of AI tools, services, models, and their purposes:**
-  - **Gemini 3.1 Pro:** Used as the primary AI pair-programmer for architectural decisions, backend logic (FastAPI, DuckDB), frontend structure, and debugging complex state issues.
-  - **Cursor / GitHub Copilot:** Used for inline code completion and boilerplate generation.
-- **List of AI agents, including roles and skills:**
-  - **Antigravity (Coding Assistant):** Provided end-to-end fullstack development, reading/writing codebase files, running terminal tests, and performing root-cause analysis.
-- **List of key prompts used:**
-  - *"Migrate the solo portfolio dashboard to a collaborative multi-user platform tracking aggregate team holdings."*
-  - *"Enforce a per-member coin limit (maximum 5 coins)."*
-  - *"Implement a visual layout with side-by-side bar charts and multi-series line charts for team member comparison."*
-- **List of key review points and the corresponding decision made:**
-  - *Review Point:* Shared vs. Isolated portfolios. *Decision:* Display aggregate team data at the top, with individual contributions visibly delineated in the charts and tables to foster healthy competition and transparency.
-  - *Review Point:* Frontend authentication state. *Decision:* Moved from parallel unauthenticated API fetches to a strict `fetchMe()` sequence to resolve 401 errors and ensure proper user session management.
+- **List of AI tools, services, models, and their purposes**:
+  - **Antigravity (Gemini 3.1 Pro)**: Our primary AI partner for architecting the collaborative multi-user system, handling backend database migrations, and polishing the frontend UI.
+- **List of AI agents, including roles and skills**:
+  - **Antigravity Agent**: Acted as a fullstack lead developer, managing everything from secure JWT authentication logic to complex analytical SQL queries in DuckDB.
+- **List of key prompts used**:
+  - "Migrate the solo portfolio dashboard to a collaborative multi-user platform tracking aggregate team holdings."
+  - "Enforce a per-member coin limit (maximum 5 coins) to encourage focused team investing."
+  - "Implement a visual layout with side-by-side bar charts and multi-series line charts for team member comparison."
+- **List of key review points and the corresponding decision made**:
+  - *Review Point*: How to handle shared vs. individual views? *Decision*: We prioritized a "Team First" dashboard that shows aggregate totals at the top, with individual member contributions clearly visible in the charts and tables for transparency.
+  - *Review Point*: How to ensure secure access? *Decision*: We implemented a strict JWT-based authentication flow, ensuring that while the dashboard is collaborative, every trade is tied to a verified user account.
 
 ---
 
 ## Installation
-Steps to setup the project workspace:
-1. Clone the project:
-   ```bash
-   git clone https://github.com/cloudostrich/cryptoportfolio_team.git
-   ```
-2. Change directory to project:
-   ```bash
-   cd cryptoportfolio_team
-   ```
-3. Setup the python virtual environment:
-   ```bash
-   python3 -m venv .venv
-   ```
+Steps to download and set up the project on your computer:
+```bash
+# 1. Download the team project code
+git clone https://github.com/cloudostrich/cryptoportfolio_team.git
+# 2. Open the project folder
+cd cryptoportfolio_team
+# 3. Create a clean workspace for Python
+python3 -m venv .venv
+```
 
-Steps to run the project.
+Steps to run the project for the first time:
 
-1. Navigate to the project root:
-   ```bash
-   cd portfolio-team
-   ```
-2. Activate the virtual environment and install dependencies:
-   ```bash
-   source .venv/bin/activate
-   pip install -r requirements.txt
-   ```
-3. Initialise the DuckDB database:
-   ```bash
-   python -m src.backend.db.init_db
-   ```
-4. Start the backend server:
-   ```bash
-   uvicorn src.backend.main:app --reload --host 0.0.0.0 --port 8000
-   ```
+```bash
+# 1. Turn on your Python workspace
+source .venv/bin/activate
+
+# 2. Install the necessary team-collaboration tools
+pip install -r requirements.txt
+
+# 3. Set up the local analytical database for the team
+python -m src.backend.db.init_db
+```
 
 ---
 
 ## Usage
-- **Access the Dashboard:** Open `http://localhost:8000` in your web browser.
-- **Register/Login:** Create a new team member account or log in with existing credentials.
-- **Add Trades:** Search for a coin (e.g., "Bitcoin"), enter the amount and price, and click "Add Trade". Note the 5-coin limit per member.
-- **Analyse Data:** Toggle between the "History" line chart and "Allocation" pie chart to see how individual assets and members contribute to the overall team portfolio. Use the timeframe tabs to view 24h, 7d, 30d, or 90d history.
+How to start and use the application:
+
+```bash
+source .venv/bin/activate
+
+# Start the collaborative backend server
+uvicorn src.backend.main:app --reload --host 0.0.0.0 --port 8000
+```
+- Open `http://localhost:8000` in your web browser.
+- Register a new account or log in to join the team dashboard.
+- Search for coins, log your trades, and watch the aggregate team statistics update in real-time.
+- *For advanced users*: Review the team's API structure and interact with the data programmatically at `http://localhost:8000/docs`.
 
 ---
 
 ## Project Structure
-- `src/frontend/` — Contains all client-side code (`index.html`, CSS styling, and modular JS scripts for API and Chart logic).
-- `src/backend/` — Contains the FastAPI application, divided into `routes/`, `services/`, `models/`, and `db/` (DuckDB interactions).
-- `data/` — Stores the embedded `portfolio.duckdb` database file.
-- `tests/` — Contains `pytest` test suites for ensuring backend reliability.
-- `Reference_Materials/` — Contains project specifications and related documentation.
+- `.agents/`: Stores prompts and memory used by the AI agent to manage the collaborative codebase.
+- `assets/`: Directory for screenshots and media showing the team dashboard in action.
+- `Reference_Materials/`: Collection of external guides and project requirements (like the B1 Builders Programme specs).
+- `src/backend/`: The multi-user "brain" handling auth, collaborative logic, and data aggregation.
+- `src/frontend/` & `data/`: The visual interface and the secure local folder where the team's shared DuckDB file is kept.
+- `tests/`: Automated checks ensuring the team tracker stays reliable for everyone.
 
 ---
 
 ## Reflection
-- **What worked:** Integrating DuckDB provided incredibly fast analytical queries, which made calculating aggregate team summaries and individual performance very efficient. The move from a "Thesis Board" to a unified team tracker simplified the user flow significantly.
-- **What failed:** Initially, the frontend was making API calls without verifying authentication status, resulting in a race condition and `401 Unauthorized` errors when transitioning from the solo project to the team project.
-- **Changes made, rationale:** We refactored `app.js` to strictly await the `fetchMe()` authentication check before attempting to load the dashboard data (`loadDashboard()`). We also changed the visual approach from individual thesis cards to a comprehensive team-wide data table and chart layout to better serve the collaborative goal.
+- **What worked**: Integrating DuckDB allowed us to run lightning-fast analytical queries on shared team data. The per-member coin limit successfully turned the tracker into a strategic tool rather than just a simple list.
+- **What failed**: Our initial transition to a multi-user system had a bug where charts would try to load before the user was fully identified, causing empty graphs.
+- **Changes made**: We refactored the frontend to strictly wait for the "Who am I?" check before loading any portfolio data.
+- **Rationale**: This ensures a secure, smooth experience where every member sees the team's status accurately as soon as they log in.
+
+
