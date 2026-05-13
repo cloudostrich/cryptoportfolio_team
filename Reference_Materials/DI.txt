@@ -1,0 +1,799 @@
+Design
+Method
+Cards
+
+Discover
+
+Deliver
+
+Define
+
+Develop
+Created to help anyone design and create innovatively.
+The DI Design Method Cards introduce methods and
+tools used in design and systems thinking to help develop
+projects through our Discover, Define, Develop and
+Deliver framework.
+Making the impossible, possible.
+For the online version of these cards and accompanying
+demo videos for selected methods, go to: designinnovation.sg
+
+Mindfulness
+
+MINDSET
+
+MINDSET
+
+Empathy
+
+Define
+
+Interpret & reframe
+needs & map them
+into activities,
+functions and
+representations
+
+Discover
+
+MINDSET
+
+Joyfulness
+
+Ideate and Model
+concepts based
+on identified
+opportunities
+
+Develop
+
+Opportunity Statement
+
+Identify & understand
+opportunities &
+needs collaboratively
+through co-creation
+with stakeholders
+
+Opportunity Space
+
+MINDSET
+
+Non-attachment
+
+Iteratively prototype
+& test concepts &
+models with
+stakeholders
+
+Deliver
+
+Solution
+
+Discover
+• Who are our users?
+• What are their needs?
+• What are their reactions?
+• How do our users behave?
+• How do our users feel?
+• How do they interact with an
+object or the environment?
+• How do they feel about
+our product?
+
+Develop
+• How do we ideate?
+• How do we think out of
+the box?
+• How do we expand
+on the current idea?
+• How do we select the
+best concept?
+• How do we define
+design criterias?
+• How do we give more
+depth to our design?
+
+Define
+• How do we make sense of
+these findings?
+• Can we define a real person
+as our user?
+• How would our product fare
+in different situations?
+• How did this problem
+come about?
+• Can we define our product
+specifications?
+
+Deliver
+• How do we reduce the risk
+of failure during delivery?
+• How do we prototype?
+• How do we test a concept
+before the actual run?
+
+Design
+Method
+Cards
+
+Cards List
+
+The 4D Methodology
+Define
+
+Discover
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+User Interviews
+UR Contextual Needs Analysis
+UR User Journey Map
+UR Video Ethnography
+UR Site Analysis
+UNA Personas
+UR Scenarios
+UR Extreme User Simulation
+Scenarios
+UR Semantic Inquiry
+UR Shadowing
+UR Multi-sensory Analysis
+UR Empathic Lead User
+UR
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+
+Develop
+1
+2
+3
+4
+5
+6
+7
+1
+8
+9
+10
+11
+12
+13
+
+I DE
+
+14
+15
+16
+17
+
+CS
+
+I DE
+I DE
+I DE
+I DE
+I DE
+I DE
+AN
+I DE
+AN
+CG
+CG
+CS
+
+I DE
+I DE
+CS
+
+Affinity Analysis
+Activity Diagram
+MOD Systems Function Model
+UNA Influence Diagram
+AN House of Quality
+AN Hierarchy of Purpose
+AN 5 Whys
+AN Ishikawa (Fishbone)
+Diagram
+AN How Might We
+AN Map the System
+AN Service/UX Blueprinting
+AN Benchmarking
+AS Design Impact Framework
+AS Design Impact Framework
+(2)
+AN Framing/Reframing
+I NT
+AN
+
+Deliver
+
+Brainstorming
+DI Mindmapping
+Design by Analogy
+C-Sketch (6-3-5)
+Mashup
+Rip & Rap
+SCAMPER
+TRIZ
+Core-periphery Word Cloud
+Morph Matrix
+Parallel Sketching
+Co-Creation
+Product-Service-System
+Design (PSS)
+Real-Win-Worth
+Paired Comparison Chart
+Prioritisation Matrix
+Pugh Chart
+
+1
+
+AS
+
+2
+
+PRT
+
+3
+
+AS
+
+4
+
+PRT
+
+5
+
+AN
+
+6
+
+PRT
+
+7
+
+PRT
+
+8
+
+PRT
+
+9
+
+PRT
+
+10
+
+AS
+
+11
+
+AS
+
+12
+
+AS
+
+13
+
+PRT
+
+14
+
+PRT
+
+15
+
+PRT
+
+16
+
+AS
+
+17
+
+PRT
+
+Prototyping Canvas
+Wireframing
+Role Play
+Storyboarding
+Wizard-of-Oz
+Mockups (Paper
+Prototypes)
+Physical Model
+Scaled Model
+Isolated Subsystem Model
+Usability Testing
+Feedback Capture Matrix
+Risk Management Process
+Finite Element Modeling
+(FEM)
+Business Model Canvas
+DI Pitching
+Design Impact Canvas
+Immersive VR/AR
+
+References
+UR
+UNA
+AN
+I NT
+
+User Research
+User Needs Analysis
+Analysis
+Interpretation
+
+MOD Modeling
+I DE Ideation
+CG Concept Generation
+CS Concept Selection
+
+AS Assessment
+PRT Prototyping
+
+INTRODUCTION + MINDSET
+
+Discover Phase
+
+① Discover
+
+In the Discover phase, you will be looking to
+empathise with your end users, and the
+stakeholders of your intended products,
+services, or systems.
+The key mindset for this phase is: Empathy.
+Empathy is the ability to understand and share
+the feelings of another. It is through deeply
+empathising with our intended users that we
+gain the best insights to craft truly innovative
+and impactful solutions to the problems at hand.
+It is critical to engage in deep user studies,
+whether engaging in ethnography via
+interviews, focus groups, questionaires, or
+role-playing. You will want to understand a
+user’s needs and concerns in the relevant
+use-case contexts, as well as a user’s
+experience for competitor products,
+services, systems to best understand the
+market landscape.
+
+INTRODUCTION + MINDSET
+
+SUGGESTIONS OF POSSIBLE USE
+Gathering insights through...
+Interviews
+User Interviews
+Contextual Needs Analysis
+Semantic Inquiry
+Contextual Needs Analysis
+Understanding a user’s journey
+Scenarios
+User Journey Map
+Observations
+Shadowing
+Videography
+Site Analysis
+Multi-sensory Analysis
+Simulating experiences/ Engaging with key users
+Empathic Lead User
+Extreme User Simulation Scenarios
+
+DESIGN METHOD CARDS
+
+Discover Phase
+
+USER RESEARCH
+
+User Interviews
+
+① Discover
+
+User interviews are conducted to extract information
+from existing and/or potential users to gain a deeper
+understanding of their goals, motivations and pain points
+so that a better solution can be designed for them.
+PROCEDURE
+1. Conduct background research
+to identify user groups, user types, platforms to interview
+them (via in person or online), existing solutions available,
+and objective(s) of the interview.
+2. Prepare a list of questions
+that are open ended and non-leading to avoid response
+bias from your interviewee.
+3. Introduce yourself and the objectives
+of the interview to start things off.
+4. Go with the flow of the interview
+and be unafraid to ask questions that were originally not
+in the list if they seem like they will be promising leads.
+5. Observe & record the interview
+whether by audio, video (with permission), or have a teammate
+take notes. This will allow you to focus on the interviewee.
+6. Summarise your findings
+to clarify key points with your interviewee, and ask
+them if they have questions for you. The questions
+they ask may raise interesting points you may not
+have originally considered.
+
+Used with:
+Shadowing, 5 Whys
+
+1
+Empathy
+
+USER RESEARCH
+
+TIPS FOR INTERVIEWS
+In depth interviews typically last an hour, as a guide.
+Any longer however runs the risk of interviewee
+fatigue and not being efficient.
+Be very mindful to not lead the interview questions in
+any biased way.
+Conduct the interview in context whenever possible.
+(e.g. having the interview while in a taxi if the
+interview is centred around taxi experiences)
+Observing body language, tone, and actions (in
+contextual environment) can provide valuable
+insights to supplement verbal responses.
+
+TEMPLATE
+<project description>
+ID:
+Date:
+Demographics:
+Needs & Goals
+Tasks
+Behaviour & Habits
+Pain Points
+
+EXAMPLE: DAILY PUBLIC TRANSPORT EXPERIENCES OF
+WORKING MOTHER WITH HER YOUNG CHILD
+The findings of this interview are meant to inform the goal of designing a new Autonomous
+Vehicle model for the market in Singapore.
+QUESTION
+
+RESPONSE
+
+INSIGHTS GAINED
+
+What do you like
+about taking the
+bus and MRT?
+
+My son is the one who
+really likes double decker
+buses in particular actually!
+
+What does your
+child like about
+double decker
+buses?
+
+He loves the view, and the
+opportunity to meet other
+kids and to make friends
+with them.
+
+Could you
+describe a
+memorable
+experience you
+have that involves
+taking a bus?
+
+The bus was so crowded
+that my son and I got
+separated. I was so anxious.
+Thank goodness I found him
+seated in his favourite spot at
+the front on the upper deck.
+
+An easier way to
+monitor young children,
+or crowd management
+would be helpful.
+
+What are your
+current
+impressions of
+Autonomous
+Vehicles in
+general?
+
+I hear that there have been
+accidents. I’m a little
+concerned about safety and
+whether they are reliable.
+
+Convincing users that
+autonomous vehicles are
+safe is incredibly important.
+
+Questions asked
+by interviewee
+
+What if I need to stop for
+some issue? Like my child
+injuring himself somehow?
+You know how rowdy kids
+can get.
+
+Concerned about AV’s
+ability to respond
+appropriately to
+emergency situations.
+
+Facilitating interactions
+between kids and
+providing points of interest
+(i.e. view) could enhance
+the experience.
+
+DESIGN METHOD CARDS
+
+User Interviews
+
+USER RESEARCH
+
+Contextual Needs Analysis
+
+① Discover
+
+Dictates the context surrounding products,
+services or systems (PSS) to understand and
+account for context in the design process.
+Design in Context During Use:
+How
+User satisfaction with a
+What
+Where
+product, service or system
+(PSS) attributes depends on
+When
+Who
+the context it is in.
+Context setting questions
+
+PROCEDURE
+1. Ideate Interview
+Questions
+What do we need to
+know about? Where?
+How? and Who?
+3. Interview Users
+While using product,
+service or system in a
+realistic context.
+
+2. Context Questions
+Template
+Add, delete and modify
+questions as needed.
+
+4. Form A User Needs List
+Translate voice of user
+- combine and prioritize
+needs.
+
+5. Form Scenarios In
+Context
+By combining contextual
+answers to each question.
+Used with:
+User Interviews
+
+2
+Empathy
+
+USER RESEARCH
+
+MEASURE CONTEXT AGAINST:
+KANO MODEL
+Users will always have certain expectations of products, services
+and systems based on what they are used to. That can be viewed
+as the Expected Performance Curve. Should our new products
+positively exceed expectations, we can delight consumers.
+Conversely, should our products fail to deliver on what consumers
+have come to expect as the 'norm', they will be upset even if our
+design is super polished and fully implemented.
+
+DESIGN METHOD CARDS
+
+Contextual Needs Analysis
+
+Satisfied
+
+Delighted
+Performance
+Curve
+Not
+Implemented
+
+ce
+an
+rm
+o
+f
+r
+Pe e
+ted Curv
+Fully
+ec
+p
+Implemented
+Ex
+
+Basic
+Performance
+Curve
+
+Not Satisfied
+
+5 Categories of Customer Preferences
+1. Must-be
+
+Expected and taken for granted
+
+2. One-dimensional
+
+Satisfaction if fulfilled, vice versa
+
+3. Attractive
+
+Satisfaction if achieved, does not
+cause dissatisfaction if unfilfilled
+Neither good nor bad
+
+4. Indifferent
+5. Reverse
+
+High degree of achievement
+resulting in dissatisfaction
+
+After defining the context(s) of use, measure the user satisfaction of
+a product, service or system (PSS) against a KANO Model.
+
+USER RESEARCH
+
+User Journey Map
+
+① Discover
+
+A User Journey Map is used to visualise the
+journey of a user’s interactions and emotions
+with a product, service or system (PSS) over
+time and across channels.
+PROCEDURE
+1. Choose a persona and a scenario
+Clarify the persona’s needs, expectations and goals
+within a defined scenario (refer to “Personas” and/or
+“Scenarios” cards)
+2. Map the journey
+Chronologically plot the relevant points of action
+between the user and the PSS.
+3. Identify gaps and insights
+Analyse the Journey Map. Identify the interactions that are
+pain points and note areas where the user experiences
+delight. Draw insights to improve on the user experience.
+
+KEY COMPONENTS
+
+Persona
+
+Emotional
+Response
+
+Used with:
+User Interviews
+
+Timeline
+
+Touchpoints
+and
+Channels
+
+Scenario
+
+3
+Empathy
+
+Touchpoints
+
+Channels
+
+Emotional
+Level
+Graph
+
+iNSIGHTS:
+long wait times
+can be perceived as
+“positive” if users
+are engaged
+
+Prepares
+notes during
+taxi ride
+
+enjoys the taxi’s cool
+aircon as respite from
+the heat
+
+Gets assisted
+into taxi
+
+really dislike feeling
+dependent on others
+
+Travels to
+pick-up
+point
+
+relieved that
+his taxi finaly
+arrived
+
+Gets
+notification
+that taxi has
+arrived
+
+glad to have
+his bubble
+tea while
+he waits
+
+excited about
+his bubble
+tea order
+
+Books taxi
+Arranges
+meeting while ordering
+bubble tea
+with client
+
+Detours to Travels to
+client’s
+throw away
+office
+finishsed
+bubble tea
+
+EXAMPLE: PERSONA - MIKE TANG BOOKING TAXI
+
+Insights and Opportunities
+
+DESIGN METHOD CARDS
+
+really dislike feeling
+dependent on others
+
+bin was conveniently
+located near the drop-off
+
