@@ -77,6 +77,10 @@ if __name__ == "__main__":
 
 ```
 
+## 💡 Examples
+
+If you need advanced scripts for fetching market data or validating responses, check the `scripts/agent_examples/coingecko-api_examples/` and `scripts/agent_examples/coingecko-api_scripts/` directories.
+
 ## ❌ Deprecated Patterns to AVOID
 
 You **MUST NOT** generate code that includes any of the following outdated patterns.

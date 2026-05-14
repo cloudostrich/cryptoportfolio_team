@@ -1,15 +1,12 @@
 # AGENTS.md — B1 Builders Workspace
 
 > This file guides AI coding agents working on this repository.
-> It complements the README.md files found in each project subdirectory.
+> It complements the README.md file found at the root of the project.
 
 ## Repository Overview
 
-This project is built for the [42 Singapore B1 Builders Programme](../Reference_Materials/B1%20Builders%20Programme.md)
-
-| Project | Scope | Directory |
-|---|---|---|
-| **Crypto Portfolio Solo** | Individual-use — single user tracks crypto trades vs BTC benchmark | `cyrpto-portfolio-solo/` |
+This project is built for the [42 Singapore B1 Builders Programme](../docs/B1%20Builders%20Programme.md)
+It is a repository for a **Multi-User Collaborative Team Dashboard**: a team-based tracker for crypto trades, aggregating team holdings and individual performance vs a BTC benchmark.
 
 
 ---
@@ -18,11 +15,11 @@ This project is built for the [42 Singapore B1 Builders Programme](../Reference_
 
 | Layer | Technology | Notes |
 |---|---|---|
-| **Frontend** | Vanilla HTML + CSS + JavaScript | Replicate CoinMarketCap dark-theme portfolio tracker style. Reference look/style, see [Screenshot_example](../Reference_Materials/Screenshot_example.png) |
+| **Frontend** | Vanilla HTML + CSS + JavaScript | Replicate CoinMarketCap dark-theme portfolio tracker style. Reference look/style, see [Screenshot_example](../docs/Screenshot_example.png) |
 | **Charts** | [TradingView Lightweight Charts v5.2](https://tradingview.github.io/lightweight-charts/) | `npm install lightweight-charts` — use `createChart`, `AreaSeries`, `CandlestickSeries` |
 | **Backend** | Python 3.14 + [FastAPI](https://fastapi.tiangolo.com/) | Async REST API, Pydantic models, CORS middleware |
 | **Database** | [DuckDB](https://duckdb.org/) via Python API | File-based OLAP database — no external server required |
-| **Data Feed** | [CoinGecko API](https://docs.coingecko.com/) via `coingecko_sdk` | Pro API key; official Python SDK with built-in retries. (credentials reference in ../Reference_Materials/creds.md) |
+| **Data Feed** | [CoinGecko API](https://docs.coingecko.com/) via `coingecko_sdk` | Pro API key; official Python SDK with built-in retries. (credentials reference in ../docs/creds.md) |
 | **Python Env** | Shared `.venv/` at workspace root | `source .venv/bin/activate` |
 
 ---
@@ -41,16 +38,15 @@ source .venv/bin/activate     # From workspace root
 ### Install backend dependencies
 ```bash
 source .venv/bin/activate
-pip install -r alpha-tracker/requirements.txt
-pip install -r thesis-board/requirements.txt
+pip install -r requirements.txt
 ```
 
 ---
 
-## Project Structure (per project)
+## Project Structure
 
 ```
-<project>/
+.
 ├── README.md
 ├── LICENSE
 ├── .gitignore
@@ -85,13 +81,13 @@ pip install -r thesis-board/requirements.txt
 ### Start Crypto Portfolio Solo (port 8000)
 ```bash
 source .venv/bin/activate
-cd cyrpto-portfolio-solo && uvicorn src.backend.main:app --reload --host 0.0.0.0 --port 8000
+uvicorn src.backend.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 ### Run tests
 ```bash
 source .venv/bin/activate
-cd cyrpto-portfolio-solo && pytest tests/ -v
+pytest tests/ -v
 ```
 
 ### Lint / format
@@ -111,6 +107,7 @@ ruff format src/ tests/
 - Use `async def` for all FastAPI route handlers.
 - Store the CoinGecko API key in environment variables or a `.env` file — never hardcode secrets in source.
 - DuckDB connections: use a single connection per request lifecycle via FastAPI dependency injection.
+- **MULTI-USER TENANT ISOLATION**: This is a multi-user app. All database queries MUST enforce tenant isolation (e.g., `WHERE user_id = ?`) or properly aggregate data for team-wide views.
 
 ### JavaScript (Frontend)
 - Use **ES modules** (`import`/`export`).

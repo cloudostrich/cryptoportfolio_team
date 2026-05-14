@@ -1,6 +1,9 @@
 # Portfolio Team (Collaborative Crypto Portfolio)
 
 ## Overview
+### Inspiration
+This project is inspired by the [CoinMarketCap Portfolio Tracker](https://coinmarketcap.com/portfolio-tracker/). We aimed to capture its intuitive design and seamless tracking experience while building a fully localized, private, and collaborative alternative for teams.
+
 ### Problem
 - **Who is affected?**: Small crypto investment teams, study groups, or trading clubs who want a shared way to track their collective and individual performance.
 - **What is the issue?**: Most crypto trackers are for solo use. Teams have to use messy spreadsheets to see how everyone is doing together, leading to data entry errors and a lack of real-time visibility into the team's total health.
@@ -11,11 +14,18 @@
 | Objective | Solution | Result |
 | :--- | :--- | :--- |
 | Shared team performance tracking | Multi-user login and dashboard with aggregate stats | Success |
-| Real-time price updates for all members | Custom CoinGecko Pro SDK integration | Success |
-| Efficient analytical data storage | DuckDB for collaborative SQL operations | Success |
+| Real-time price updates for all members | Automated live price updates from CoinGecko | Success |
+| Efficient analytical data storage | Secure, high-speed local database to store team trades | Success |
 | High-performance charting | TradingView & Chart.js for team visuals | Success |
 
-- **Measurable results (if any)**: A fully functional collaborative platform where multiple users can contribute to a single team portfolio, with per-member coin limits and real-time aggregate performance analytics.
+- **Measurable results (if any)**: 
+  
+  | Metric / Feature | Manual Process | Portfolio Team Result |
+  | :--- | :--- | :--- |
+  | **Team Data Sharing** | Fragmented, error-prone spreadsheets | **Unified** (Multi-user aggregate database) |
+  | **User Experience** | Complex data entry | **Seamless** (Collaborative Dashboard) |
+  | **Portfolio Analytics** | Delayed manual calculations | **Instant** (Real-time team performance) |
+  | **Price Updates** | Seconds/minutes to manually lookup | **< 1.0 seconds** (via automated CoinGecko API) |
 
 ---
 
@@ -43,9 +53,9 @@ Our solution makes tracking crypto as a team simple and visual:
 - **Chart.js**: Powering the categorical visualizations, such as asset allocation doughnut charts and member performance bar charts.
 
 ### Backend components:
-- **Python & FastAPI**: The high-performance "brain" that manages multi-user authentication, collaborative trade processing, and real-time market data.
-- **DuckDB**: A super-fast analytical database used to securely store and aggregate trade data from all team members simultaneously.
-- **CoinGecko Pro API**: Our trusted source for fetching accurate, professional-level cryptocurrency market data for the entire team.
+- **Python & FastAPI**: The high-performance "brain" that securely manages user logins, processes team trades, and handles all the behind-the-scenes math.
+- **DuckDB**: A lightning-fast, simple database that lives directly on your computer to securely save your team's trade history without needing a complex server.
+- **CoinGecko API**: Our connection to the internet's live cryptocurrency markets, ensuring the team's dashboard always displays accurate, up-to-the-second prices.
 
 ---
 
@@ -81,16 +91,22 @@ Steps to run the project for the first time:
 # 1. Turn on your Python workspace
 source .venv/bin/activate
 
-# 2. Install the necessary team-collaboration tools
+# 2. Install all the necessary tools
 pip install -r requirements.txt
 
-# 3. Set up the local analytical database for the team
+# 3. Set up your secret passwords and settings
+cp .env.example .env
+# Open the new .env file in a text editor and add your CoinGecko API key
+
+# 4. Set up the local database to save your team's trades
 python -m src.backend.db.init_db
 ```
 
 ---
 
 ## Usage
+
+### Starting the Application
 How to start and use the application:
 
 ```bash
@@ -102,16 +118,35 @@ uvicorn src.backend.main:app --reload --host 0.0.0.0 --port 8000
 - Open `http://localhost:8000` in your web browser.
 - Register a new account or log in to join the team dashboard.
 - Search for coins, log your trades, and watch the aggregate team statistics update in real-time.
-- *For advanced users*: Review the team's API structure and interact with the data programmatically at `http://localhost:8000/docs`.
+- *For advanced users*: All API endpoints (the hidden messengers fetching your data) are available to review and interact with at `http://localhost:8000/docs`. Since we are using FastAPI, the technical details of generating this documentation are automatically taken care of for us behind the scenes.
+
+### Testing
+
+To ensure the application is functioning correctly, you can run the automated test suite.
+
+**1. Run the Full Test Suite:**
+This runs all automated tests for the backend logic and API routes without making any live external requests.
+```bash
+source .venv/bin/activate
+pytest tests/ -v
+```
+
+**2. Run the Live CoinGecko API Speed Tests:**
+This specifically tests the connection to the live CoinGecko API to ensure correct data retrieval and measures the response speed.
+```bash
+source .venv/bin/activate
+pytest tests/test_coingecko_live.py -v -s
+```
 
 ---
 
 ## Project Structure
 - `.agents/`: Stores prompts and memory used by the AI agent to manage the collaborative codebase.
 - `assets/`: Directory for screenshots and media showing the team dashboard in action.
-- `Reference_Materials/`: Collection of external guides and project requirements (like the B1 Builders Programme specs).
-- `src/backend/`: The multi-user "brain" handling auth, collaborative logic, and data aggregation.
-- `src/frontend/` & `data/`: The visual interface and the secure local folder where the team's shared DuckDB file is kept.
+- `docs/`: Collection of external guides and project requirements (like the B1 Builders Programme specs).
+- `src/backend/`: The hidden "brain" of the app that manages user logins, calculates profits, and securely saves the data.
+- `src/frontend/`: The visual parts of the app that you interact with in your browser (the design, charts, and buttons).
+- `data/`: The secure folder right on your computer where your team's trade history is safely saved.
 - `tests/`: Automated checks ensuring the team tracker stays reliable for everyone.
 
 ---

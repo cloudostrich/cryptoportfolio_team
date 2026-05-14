@@ -25,6 +25,7 @@ Do not use this skill for:
 # Project assumptions
 
 - DuckDB is the analytical or embedded database for this project.
+- Database schemas, initialization scripts, and connection logic live in `src/backend/db/`.
 - Schema and query style should match repository conventions.
 - SQL should be reproducible, readable, and safe to rerun when possible.
 - Analytical transforms should live in dedicated modules or scripts, not be scattered across unrelated files.
@@ -72,20 +73,11 @@ Document:
 - refresh strategy
 - deduplication rule
 
-# References
 
-Load only when needed:
-- `references/schema-conventions.md`
-- `references/common-queries.md`
-- `references/ingestion-patterns.md`
-- `references/time-series-notes.md`
 
 # Examples
 
-Useful examples:
-- `examples/analytics_query.py`
-- `examples/load_parquet.py`
-- `examples/create_price_fact_table.sql`
+If you need advanced examples of analytics queries, schemas, or data ingestion for DuckDB, check the `scripts/agent_examples/duckdb_examples/` and `scripts/agent_examples/duckdb_scripts/` directories.
 
 # Constraints
 
